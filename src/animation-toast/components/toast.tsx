@@ -104,7 +104,7 @@ const Toast = forwardRef(({}, ref) => {
             </Text>
             {state.description && (
               <Text
-                style={[styles.toastDescription, {color: descriptionColor}]}>
+                style={[styles.description, {color: descriptionColor}]}>
                 {state.description}
               </Text>
             )}
@@ -147,7 +147,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     marginHorizontal: 5,
   },
-  toastDescription: {
+  description: {
     fontSize: 10,
     fontWeight: '500',
   },
