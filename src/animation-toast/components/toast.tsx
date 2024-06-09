@@ -53,7 +53,7 @@ const Toast = forwardRef(({}, ref) => {
         type,
       });
       toastTopAnimation.value = withSequence(
-        withTiming(Math.max(Number(insets?.bottom), 15)),
+        withTiming(Math.max(Number(insets?.top), 15)),
         withDelay(
           duration,
           withTiming(-100, undefined, finish => {
@@ -103,8 +103,7 @@ const Toast = forwardRef(({}, ref) => {
               {state?.title}
             </Text>
             {state.description && (
-              <Text
-                style={[styles.description, {color: descriptionColor}]}>
+              <Text style={[styles.description, {color: descriptionColor}]}>
                 {state.description}
               </Text>
             )}
