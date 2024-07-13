@@ -44,12 +44,6 @@ const AnimationCounter = ({
     );
   }, [shakeTranslateX]);
 
-  const counterTextStyle = useAnimatedStyle(() => {
-    return {
-      transform: [{translateX: shakeTranslateX.value}],
-    };
-  }, [shakeTranslateX]);
-
   const isShaking = useDerivedValue(() => {
     return shakeTranslateX.value !== 0;
   }, [shakeTranslateX]);
@@ -76,14 +70,16 @@ const AnimationCounter = ({
     });
   }, [minCount, shake]);
 
-  const errorTextStyle = useAnimatedStyle(() => {
+  const counterTextStyle = useAnimatedStyle(() => {
     return {
+      transform: [{translateX: shakeTranslateX.value}],
       color: withTiming(isShaking.value ? 'red' : 'black', {
         duration: 50,
       }),
       ...style,
     };
-  }, []);
+  }, [shakeTranslateX]);
+
   const errorButtonTextStyle = useAnimatedStyle(() => {
     return {
       color: withTiming(isShaking.value ? 'red' : 'grey', {
@@ -108,9 +104,7 @@ const AnimationCounter = ({
         onPress={onDecrement}
         textStyle={errorButtonTextStyle}
       />
-      <Animated.Text style={[counterTextStyle, errorTextStyle]}>
-        {countValue}
-      </Animated.Text>
+      <Animated.Text style={[counterTextStyle]}>{countValue}</Animated.Text>
       <CounterButton
         text="+"
         onPress={onIncrement}
