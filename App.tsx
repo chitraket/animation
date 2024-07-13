@@ -1,18 +1,22 @@
 import React from 'react';
-import {AnimationTopTab} from './src';
-import {
-  horizontalScrollData,
-  verticalScrollData,
-} from './src/animation-top-tab/data';
+import {AnimationCounter} from './src';
 import {SafeAreaProvider} from 'react-native-safe-area-context';
+import {View} from 'react-native';
 
 const App = () => {
   return (
     <SafeAreaProvider>
-      <AnimationTopTab
-        horizontalScrollData={horizontalScrollData}
-        verticalScrollData={verticalScrollData}
-      />
+      <View
+        style={{
+          flex: 1,
+          justifyContent: 'center',
+          alignItems: 'center',
+          gap: 25,
+        }}>
+        <AnimationCounter size="lg" />
+        <AnimationCounter size="md" />
+        <AnimationCounter size="sm" />
+      </View>
     </SafeAreaProvider>
   );
 };
