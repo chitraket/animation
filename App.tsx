@@ -1,7 +1,7 @@
 import React from 'react';
 import {SafeAreaProvider} from 'react-native-safe-area-context';
 import {View} from 'react-native';
-import AnimationScratchCard from './src/animation-scratch-card/animation-scratch-card';
+import {AnimationScratchCard} from './src';
 
 const App = () => {
   return (
