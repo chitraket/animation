@@ -1,7 +1,7 @@
 import React from 'react';
-import {AnimationCounter} from './src';
 import {SafeAreaProvider} from 'react-native-safe-area-context';
 import {View} from 'react-native';
+import AnimationScratchCard from './src/animation-scratch-card/animation-scratch-card';
 
 const App = () => {
   return (
@@ -11,11 +11,8 @@ const App = () => {
           flex: 1,
           justifyContent: 'center',
           alignItems: 'center',
-          gap: 25,
         }}>
-        <AnimationCounter size="lg" />
-        <AnimationCounter size="md" />
-        <AnimationCounter size="sm" />
+        <AnimationScratchCard />
       </View>
     </SafeAreaProvider>
   );
