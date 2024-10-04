@@ -1,11 +1,11 @@
 import React from 'react';
 import {SafeAreaProvider} from 'react-native-safe-area-context';
-import {AnimationStackCard} from './src';
+import {AnimationParallaxCarousel} from './src';
 
 const App = () => {
   return (
     <SafeAreaProvider>
-      <AnimationStackCard />
+      <AnimationParallaxCarousel />
     </SafeAreaProvider>
   );
 };

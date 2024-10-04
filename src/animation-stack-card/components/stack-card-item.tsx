@@ -22,7 +22,7 @@ type Props = {
 const StackCardItem = ({item, index, actualIndex, setActualIndex}: Props) => {
   const position = useSharedValue({x: 0, y: 0});
   const lastOffset = useSharedValue({x: 0, y: 0});
-  const value = useSharedValue(9);
+  const value = useSharedValue(data.length || 0);
   const panGestureHandler = Gesture.Pan()
     .runOnJS(true)
     .onUpdate(({translationX, translationY}) => {

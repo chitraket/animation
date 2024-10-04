@@ -1,4 +1,5 @@
 import AnimationCounter from './animation-counter/animation-counter';
+import AnimationParallaxCarousel from './animation-parallax-carousel/animation-parallax-carousel';
 import AnimationRefresh from './animation-refresh/animation-refresh';
 import AnimationScratchCard from './animation-scratch-card/animation-scratch-card';
 import AnimationStackCard from './animation-stack-card/animation-stack-card';
@@ -16,4 +17,5 @@ export {
   AnimationScratchCard,
   AnimationRefresh,
   AnimationStackCard,
+  AnimationParallaxCarousel,
 };
