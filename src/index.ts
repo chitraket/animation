@@ -1,5 +1,6 @@
 import AnimationBackgroundCard from './animation-background-card/animation-background-card';
 import AnimationCounter from './animation-counter/animation-counter';
+import AnimationPagination from './animation-pagination/animation-pagination';
 import AnimationParallaxCarousel from './animation-parallax-carousel/animation-parallax-carousel';
 import AnimationRefresh from './animation-refresh/animation-refresh';
 import AnimationScratchCard from './animation-scratch-card/animation-scratch-card';
@@ -20,4 +21,5 @@ export {
   AnimationStackCard,
   AnimationParallaxCarousel,
   AnimationBackgroundCard,
+  AnimationPagination,
 };

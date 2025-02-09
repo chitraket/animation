@@ -1,14 +1,16 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {SafeAreaProvider} from 'react-native-safe-area-context';
-import {AnimationBackgroundCard} from './src';
-import {View} from 'react-native';
+import {AnimationPagination} from './src';
 
 const App = () => {
+  const [currentPage, setCurrentPage] = useState(0);
   return (
     <SafeAreaProvider>
-      <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
-        <AnimationBackgroundCard />
-      </View>
+      <AnimationPagination
+        maxPage={20}
+        curPage={currentPage}
+        setCurPage={setCurrentPage}
+      />
     </SafeAreaProvider>
   );
 };
